@@ -10,6 +10,7 @@
 
 }*/
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 @font-face {
 	font-family: 'puls4';
@@ -56,10 +57,7 @@
 	margin-right: .5em;
 }
 
-*{
-	margin: 0;
-	padding: 0;
-}
+
 
 a{
 	color: #22BCE0;
@@ -190,6 +188,11 @@ nav ul #publicar_nav a:hover{
 	box-shadow: 0 0 30px yellow;
 }
 
+nav ul #publicar_nav a.disabled{
+	background: red;
+	cursor: default;
+	box-shadow: none;
+}
 
 nav ul li{
 	display: inline-block;
@@ -335,6 +338,7 @@ nav ul li a:hover{
 	border: 1px solid #CCC;
 	border-radius: 5px;
 	padding: 0.2em 0.6em;
+	width: 10em;
 }
 
 .formulario input[type="submit"]{
@@ -344,4 +348,5 @@ nav ul li a:hover{
 	font-style: italic;
 	text-shadow: rgba(0,0,0,0.7) 2px 2px 5px;
 	color: white;
+	width: 7em;
 }
