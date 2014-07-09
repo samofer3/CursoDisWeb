@@ -5,6 +5,7 @@ var $form = $('#formulario'), //obtiene valor del id formulario
 	$list = $('#contenido'), //obtiene la lista de todos los post para poder ocuparlos unirlos al final
 	$post = $('.item').first(); //obtiene el primer elemento de la clase item
 
+
 if (localStorage.getItem("autosave")) { //verifica si esta creada la variable autosave
 	$titulo.val(sessionStorage.getItem("titulo")); //Obtiene el valor que esta en sessionStorage conn key "titulo"
 	$url.val(sessionStorage.getItem("url")); //Obtiene el valor que esta en sessionStorage conn key "url"
@@ -15,7 +16,9 @@ setInterval(function(){ // funcion que se ejecuta cada cierto intervalo de tiemp
 	sessionStorage.setItem("url", $url.val()); //guarda en el sessionStorage el valor del campo "url"
 }, 1000)
 
-function mostrarFormulario(){
+function mostrarFormulario(evento){
+	//evento.preventDefault(); //Cancela el efecto del evento igual que return false pero se debe de apoyar de stopPropagation para evitar que los eventos sucesan en donde esta contenido
+	//evento.stopPropagation(); //Evita que se propague el evento en los contenedores del elemento
 	$form.slideToggle(); //Funcion que cambia a valor hidden/visible algun objeto
 	$list.slideToggle(); //Esconde la lista para poder introducir el post sin problemas
 	return false; //evita que el <a> tenga funcion href
@@ -37,7 +40,7 @@ function agregarPost(){
 	mostrarFormulario(); //Llama a invertir el slideToggle
 	$titulo.val("");
 	$url.val("");
-	$clone.slideDowm(); //Agrega la animacion fadeIn()
+	$clone.fadeIn(); //Agrega la animacion fadeIn()
 	return false; //Evita tener funcion al agregar el submit
 }
 

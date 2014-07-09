@@ -15,9 +15,7 @@
 	 		<img src="logo.png" alt="logo" />
 	 	</figure>
 	 	<h1>Puls2014: Comunidad online</h1>
-	 	<figure id="avatar">
-	 		<img src="avatar.jpg" alt="avatar">
-	 	</figure>
+	 	<figure id="avatar"></figure>
 	 </header>
 	 <nav>
 	 	<ul>
@@ -35,6 +33,8 @@
 	 	<input type="submit" value="Agregar" />
 	 </form>
 	 <aside>
+	 	<div id="clima"></div>
+	 	<div id="geo"></div>
 		<video width="320" height="240" controls autoplay>
 			<source src="lecturas.m4v" type="video/mp4">
 			<source src="lecturas.ogg" type="video/ogg">
@@ -204,11 +204,14 @@
 	 		<strong>Powered by @samofer3</strong>
 	 	</p>
 	 	<p>Mejorando.la 2014</p>
+	 	<div class="logos"></div>
 	 </footer>
-	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	 <script src="formulario.js"></script>
+	 <script src="geo.js"></script>
+	 <script src="ajax.js"></script>
 	 <script>
-	 $(document).on("ready", function(){
+	 $(function(){ //$(document).on("ready", function(){
 	 /*console.log("Ya se disparo el evento DOMContentLoader");*/
 	 
 	 })
